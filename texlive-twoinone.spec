@@ -5,7 +5,7 @@
 # catalog-license pd
 # catalog-version undef
 Name:		texlive-twoinone
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	Print two pages on a single page
 Group:		Publishing
