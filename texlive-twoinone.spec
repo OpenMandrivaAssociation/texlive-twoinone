@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-twoinone
 Version:	20180303
-Release:	1
+Release:	2
 Summary:	Print two pages on a single page
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/twoinone
