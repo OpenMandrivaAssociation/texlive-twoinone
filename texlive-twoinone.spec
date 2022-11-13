@@ -1,18 +1,12 @@
-# revision 17024
-# category Package
-# catalog-ctan /macros/latex/contrib/twoinone
-# catalog-date 2010-02-26 11:17:49 +0100
-# catalog-license pd
-# catalog-version undef
 Name:		texlive-twoinone
-Version:	20180303
-Release:	2
+Version:	17024
+Release:	1
 Summary:	Print two pages on a single page
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/twoinone
 License:	PD
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/twoinone.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/twoinone.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/twoinone.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/twoinone.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -24,12 +18,12 @@ A4 page. Page numbers appear on the included pages, and not on
 the landscape 'container' page.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -39,23 +33,10 @@ the landscape 'container' page.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 20100226-2
-+ Revision: 757160
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20100226-1
-+ Revision: 719819
-- texlive-twoinone
-- texlive-twoinone
-- texlive-twoinone
-
