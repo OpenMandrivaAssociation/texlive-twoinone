@@ -3,7 +3,7 @@ Version:	17024
 Release:	2
 Summary:	Print two pages on a single page
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/twoinone
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/twoinone
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/twoinone.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/twoinone.doc.r%{version}.tar.xz
